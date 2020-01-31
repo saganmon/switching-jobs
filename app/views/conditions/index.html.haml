@@ -1,0 +1,27 @@
+.h2 転職活動状況
+
+%br
+%table.my-status
+  %tr
+    %td
+      状況
+    %td
+      企業名
+    %td
+      地域
+    %td
+      次回日程
+    %td
+      メモ
+  - @conditions.each do |c|
+    %tr
+      %td
+        = c.phase
+      %td
+        = c.company_name
+      %td
+        = c.area
+      %td
+        = c.date
+      %td
+        = c.memo

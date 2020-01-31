@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_30_035237) do
+ActiveRecord::Schema.define(version: 2020_01_31_080004) do
+
+  create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "phase"
+    t.string "date"
+    t.text "memo"
+    t.bigint "office_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["office_id"], name: "index_conditions_on_office_id"
+  end
 
   create_table "offices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company_name", null: false
@@ -20,7 +30,10 @@ ActiveRecord::Schema.define(version: 2020_01_30_035237) do
     t.string "people"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "area"
+    t.integer "revenue"
     t.index ["company_name"], name: "index_offices_on_company_name"
   end
 
+  add_foreign_key "conditions", "offices"
 end

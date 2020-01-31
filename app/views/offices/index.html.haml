@@ -16,6 +16,11 @@
       設立年月日
     %td
       従業員数
+    %td
+      地域
+    %td
+      売上高
+
   - @offices.each do |office|
     %tr
       %td
@@ -28,8 +33,10 @@
         = office.foundation
       %td
         = office.people
-
-
+      %td
+        = office.area
+      %td
+        = office.revenue
 
 -# = form_for import_offices_path, method: :post do |f|
 -#   = f.file_field :file
