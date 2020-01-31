@@ -1,1 +1,36 @@
-hello haml!
+.h2 企業の取り込み
+= form_tag import_offices_path, multipart: true do
+  = file_field_tag :file
+  = submit_tag "Import"
+
+%br
+%table.my_page_info
+  %tr
+    %td
+      企業名
+    %td
+      会社概要
+    %td
+      代表取締役
+    %td
+      設立年月日
+    %td
+      従業員数
+  - @offices.each do |office|
+    %tr
+      %td
+        = office.company_name
+      %td
+        = office.overview
+      %td
+        = office.ceo
+      %td
+        = office.foundation
+      %td
+        = office.people
+
+
+
+-# = form_for import_offices_path, method: :post do |f|
+-#   = f.file_field :file
+-#   = f.submit 'Send'
