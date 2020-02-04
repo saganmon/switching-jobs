@@ -19,5 +19,6 @@ class Office < ApplicationRecord
   end
 
   has_many :users
+  has_many :conditions
 
 end
