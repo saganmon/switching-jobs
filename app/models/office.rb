@@ -18,4 +18,6 @@ class Office < ApplicationRecord
     ["company_name", "overview", "ceo", "foundation", "people", "area", "revenue"]
   end
 
+  has_many :users
+
 end

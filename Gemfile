@@ -82,3 +82,5 @@ gem 'httpclient'
 gem 'mechanize'
 
 gem 'roo'
+
+gem 'enum_help'
