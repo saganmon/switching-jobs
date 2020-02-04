@@ -16,9 +16,9 @@
 .body
   .body__new
     -# = link_to new_condition_path do
-    %button 活動登録
+    %button.body__new--button 活動登録
 
-  .main__list
+  .body__list
     %br
     %table.conditions-table
       %tbody.conditions-table__body
@@ -40,7 +40,7 @@
               メモ
           %td
             %div(class: conditions-table__column--edit)
-              編集
+              編集/削除
       - @conditions.each do |c|
         %tbody.conditions-table__body
           %tr
@@ -63,6 +63,9 @@
               %div(class: conditions-table__column--edit)
                 = link_to edit_condition_path(c) do
                   = icon('fas', 'edit', class: "button")
+                = link_to condition_path(c), method: :delete do
+                  = icon('fas', 'trash-alt', class: "button")
+
 
 .modal
   .modal__items

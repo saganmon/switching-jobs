@@ -10,6 +10,6 @@ class User < ApplicationRecord
 
   before_save { self.email = email.downcase }
 
-  has_many :conditions
+  has_many :conditions, dependent: :destroy
 
 end

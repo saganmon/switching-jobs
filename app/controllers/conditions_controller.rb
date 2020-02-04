@@ -8,7 +8,6 @@ class ConditionsController < ApplicationController
 
   def new
     @condition = Condition.new
-    # @offices = Office.all
   end
 
   def create
@@ -19,10 +18,6 @@ class ConditionsController < ApplicationController
     end
   end
 
-  def show
-    @condition = Condition.find(params[:id])
-  end
-
   def edit
     @condition = Condition.find(params[:id])
   end
@@ -30,14 +25,13 @@ class ConditionsController < ApplicationController
   def update
     condition = Condition.find(params[:id])
     condition.update(post_params)
-    # redirect_to condition_path(condition.id)
-    redirect_to conditions_path
+    redirect_to user_path(current_user)
   end
 
   def destroy
     condition = Condition.find(params[:id])
     condition.destroy
-    redirect_to root_path
+    redirect_to user_path(current_user)
   end
 
   private

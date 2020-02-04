@@ -3,6 +3,8 @@
     .welcome__user-action--title
       ようこそ転職サプリへ
     .welcome__user-action--register
+      = icon('fas', 'user-plus', class: "button")
       = link_to "新規登録", new_user_registration_path
     .welcome__user-action--login
+      = icon('fas', 'sign-in-alt', class: "button")
       = link_to "ログイン", new_user_session_path
