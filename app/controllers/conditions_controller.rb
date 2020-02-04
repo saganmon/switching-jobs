@@ -12,7 +12,7 @@ class ConditionsController < ApplicationController
 
   def create
     Condition.create(post_params)
-    redirect_to root_path
+    redirect_to user_path(current_user)
   end
 
   def show

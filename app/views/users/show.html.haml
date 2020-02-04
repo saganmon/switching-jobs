@@ -1,0 +1,65 @@
+.header
+  .header__title
+    転職サプリ
+  .header__contents
+    - if user_signed_in?
+      .header__contents--name
+        ようこそ #{current_user.nickname} さん
+      .header__contents--button
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      .header__contents--name
+        = link_to "新規登録", new_user_registration_path
+      .header__contents--button
+        = link_to "ログイン", new_user_session_path
+
+.body
+  .body__new
+    = link_to new_condition_path do
+      = icon('fas', 'user-friends', class: "button main__new")
+      活動登録
+      = icon('fas', 'user-friends', class: "button main__new")
+
+  .main__list
+    %br
+    %table.conditions-table
+      %tr.conditions-table__column.title
+        %td
+          %div(class: conditions-table__column--status)
+            状況
+        %td
+          %div(class: conditions-table__column--company-name)
+            企業名
+        %td
+          %div(class: conditions-table__column--company-area)
+            地域
+        %td
+          %div(class: conditions-table__column--date)
+            次回日程
+        %td
+          %div(class: conditions-table__column--memo)
+            メモ
+        %td
+          %div(class: conditions-table__column--edit)
+            編集
+      - @conditions.each do |c|
+        %tr
+          %td
+            %div(class: conditions-table__column--status)
+              = c.phase_i18n
+          %td
+            %div(class: conditions-table__column--company-name)
+              = c.office.company_name
+          %td
+            %div(class: conditions-table__column--company-area)
+              = c.office.area
+          %td
+            %div(class: conditions-table__column--date)
+              = c.date
+          %td
+            %div(class: conditions-table__column--memo)
+              = c.memo
+          %td
+            %div(class: conditions-table__column--edit)
+              = link_to edit_condition_path(c) do
+                = icon('fas', 'edit', class: "button")
