@@ -1,9 +1,12 @@
 class ConditionsController < ApplicationController
 
+  def welcome
+  end
+
   def index
-    @condition = Condition.new
-    @conditions = Condition.all
-    @offices = Office.all
+    # @condition = Condition.new
+    # @conditions = Condition.all
+    # @offices = Office.all
   end
 
   def new
@@ -36,7 +39,7 @@ class ConditionsController < ApplicationController
 
   private
   def post_params
-    params.require(:condition).permit(:phase, :date, :memo, :office_id).merge(user_id: current_user.id)
+    params.require(:condition).permit(:phase, :result, :date, :memo, :office_id).merge(user_id: current_user.id)
   end
 
 end

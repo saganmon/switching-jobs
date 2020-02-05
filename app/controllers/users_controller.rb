@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def index
+  end
+
   def show
     if user_signed_in?
       @nickname = current_user.nickname

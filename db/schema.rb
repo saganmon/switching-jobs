@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_050935) do
+ActiveRecord::Schema.define(version: 2020_02_05_054346) do
 
   create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "phase"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_050935) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "result"
     t.index ["office_id"], name: "index_conditions_on_office_id"
   end
 

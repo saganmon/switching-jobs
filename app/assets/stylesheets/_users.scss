@@ -1,10 +1,152 @@
+@import "modules/fonts";
+
 * {
   box-sizing: border-box;
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-weight: bold;
+  font-family: $font-family;
+  font-size: $font-size-title;
+  color: $font-color-body;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: $font-family;
+  font-size: $font-size-middle;
+  color: $font-color-subtitle;
+}
+
+table {
+  background-color: ghostwhite;
+  overflow: scroll;
+}
+
+table,tr,th, td {
+  border-top: 1px solid #bbb;
+}
+
+tr, th, td {
+  height: 50px;
+}
+
+.welcome {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/images/backgroundimage_1.png");
+  background-size: cover;
+  padding-top: 20%;
+  &__user-action {
+    text-align: center;
+    &--title {
+      // writing-mode: vertical-rl;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-title;
+      color: $font-color-title;
+      margin-bottom: 30px;
+    }
+    &--register {
+      // writing-mode: vertical-rl;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-subtitle;
+      color: $font-color-subtitle;
+      a {
+        text-decoration: none;
+        color: $font-color-subtitle;
+      }
+    }
+    &--login {
+      // writing-mode: vertical-rl;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-subtitle;
+      color: $font-color-subtitle;
+      a {
+        text-decoration: none;
+        color: $font-color-subtitle;
+      }
+    }
+  }
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  height: 100vh;
+  width: 100vw;
+  &__title {
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-title;
+    color: $font-color-subtitle;
+    line-height: 500px;
+    margin-right: 50px;
+  }
+  &__offices {
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    margin-right: 50px;
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-middle;
+    color: $font-color-subtitle;
+    &--picture {
+      width: 400px;
+      height: 400px;
+      background: url('/images/company_image.png');
+    }
+    &--text {
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-body;
+    }
+    &--link {
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-middle;
+      a {
+        text-decoration: none;
+        color: $font-color-body;
+      }
+
+    }
+  }
+  &__conditions {
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-middle;
+    color: $font-color-subtitle;
+    &--picture {
+      width: 400px;
+      height: 400px;
+      background: url('/images/status_image.png');
+    }
+    &--text {
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-body;
+    }
+    &--link {
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-middle;
+      a {
+        color: $font-color-body;
+        text-decoration: none;
+      }
+
+    }
+  }
 }
 
 
@@ -12,48 +154,59 @@ h2 {
   height: 100px;
   width: 100vw;
   padding: 20px;
-  background-color: mediumaquamarine;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
   position: fixed;
   display: flex;
   justify-content: space-between;
+  border-bottom: 5px solid #bbb;
   &__title {
-    font-size: 40px;
-    color: dimgray;
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-subtitle;
+    color: $font-color-subtitle-comp;
   }
   &__contents {
     display: flex;
     &--name {
-      font-size: 20px;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-subtitle-comp;
       margin-right: 10px;
     }
     &--button {
-      font-size: 20px;
+      a {
+        font-weight: bold;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        color: $font-color-subtitle-comp;
+        text-decoration: none;
+      }
     }
   }
-
 }
 
 
-.body {
+.body-conditions {
   height: 100vh;
   width: 100vw;
   padding: 120px 50px 50px 50px;
-  background-image: url("/images/backgroundimage.png");
+  background-image: url("/images/status_list_image.png");
   background-size: cover;
   &__new {
     height: 50px;
     width: 100px;
-    color: black;
-    font-size: 20px;
     a {
-      color: black;
-      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-subtitle;
       text-decoration: none;
     }
     &--button {
-      font-size: 20px;
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-subtitle;
     }
   }
   &__list {
@@ -62,84 +215,71 @@ h2 {
   }
 }
 
+.conditions-table {
+  width: calc(100vw - 100px);
+  &__body {
+    font-family: $font-family;
+    font-size: $font-size-body;
+    color: $font-color-body;
+  }
+  &__column {
+    border-top: 3px solid #bbb;
+    border-bottom: 3px solid #bbb;
+    position: sticky;
+    z-index: 1;
+    &--status {
+
+    }
+    &--result {
+
+    }
+    &--company-name {
+      
+    }
+    &--company-area {
+      
+    }
+    &--date {
+      
+    }
+    &--memo {
+      
+    }
+    &--edit {
+      color: $font-size-body;
+
+      a {
+        text-decoration: none;
+      }
+      
+    }
+  }
+}
 
 .new-status {
   height: 500px;
   width: 800px;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   &__field {
-
     &--text {
       height: 50px;
       width: 500px;
       margin-bottom: 20px;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-body;
     }
   }
-
   &__send {
-
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-body;
+    color: $font-color-body;
   }
 }
 
 .title {
   font-weight: bold;
-}
-
-table {
-  background-color: ghostwhite;
-  overflow: scroll;
-}
-
-table,tr,td {
-  border-top: 1px solid #bbb;
-}
-
-tr {
-  height: 50px;
-}
-
-.conditions-table__column.title {
-  border-bottom: 3px solid #bbb;
-  // position: fixed;
-  position: sticky;
-  z-index: 1;
-}
-
-.conditions-table {
-  width: calc(100vw - 100px);
-}
-
-.welcome {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("/images/backgroundimage.png");
-  background-size: cover;
-  padding-top: 20%;
-  &__user-action {
-    text-align: center;
-    &--title {
-      // writing-mode: vertical-rl;
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-    &--register {
-      // writing-mode: vertical-rl;
-      font-size: 30px;
-      a {
-        color: black;
-        text-decoration: none;
-      }
-    }
-    &--login {
-      // writing-mode: vertical-rl;
-      font-size: 30px;
-      a {
-        color: black;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 .modal {
@@ -161,6 +301,7 @@ tr {
     color: #666666;
     position:fixed;
     z-index: 2;
+    padding: 10px;
     // &--message {
     //   font-size: 20px;
     //   text-align: center;

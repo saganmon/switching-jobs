@@ -9,6 +9,11 @@ $(function(){
             </div>
           </td>
           <td>
+            <div class:="conditions-table__column--result">
+              ${condition.result}
+            </div>
+          </td>
+          <td>
             <div class:="conditions-table__column--company-name">
               ${condition.company_name}
             </div>

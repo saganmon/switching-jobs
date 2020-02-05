@@ -1,0 +1,19 @@
+.menu-items
+  .menu-items__title
+    Contents
+  .menu-items__offices
+    = icon('fas', 'building', class: "button")
+    企業を探す
+    .menu-items__offices--picture
+    .menu-items__offices--text
+      福岡を中心としたWeb系の企業を紹介しています。
+    .menu-items__offices--link
+      = link_to "Go", offices_path
+  .menu-items__conditions
+    = icon('fas', 'chart-line', class: "button")
+    活動を見る
+    .menu-items__conditions--picture
+    .menu-items__conditions--text
+      あなたの転職活動の状況を確認しましょう。
+    .menu-items__conditions--link
+      = link_to "Go", user_path(current_user)

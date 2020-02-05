@@ -7,6 +7,10 @@ ja:
         first_stage: "一次選考"
         second_stage: "二次選考"
         final_stage: "最終選考"
+      result:
+        waiting: "結果待ち"
+        passed: "合格"
+        failed: "不合格"
   activerecord:
     errors:
       messages:
