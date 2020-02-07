@@ -1,12 +1,7 @@
 class ConditionsController < ApplicationController
+  # before_action :set_condition, only: [:update, :destroy]
 
   def welcome
-  end
-
-  def index
-    # @condition = Condition.new
-    # @conditions = Condition.all
-    # @offices = Office.all
   end
 
   def new

@@ -46,12 +46,23 @@
   }
 }
 
-.offices-table {
-  width: calc(100vw - 100px);
-  &__body {
-    &--title {
+th, td {
+  border-top: 1px solid #bbb;
+  height: 50px;
+  font-family: $font-family;
+  font-size: $font-size-body;
+  color: $font-color-body;  
+}
 
-    }
+th {
+  font-weight: bold;
+  border-bottom: 1px solid #bbb;
+}
+
+
+.offices-table {
+  width: calc(100vw - 200px);
+  &__body {
   }
   &__column {
     position: sticky;
@@ -83,7 +94,76 @@
     &--button {
       padding-left: 5px;
       width: 5%;
+      a {
+        text-decoration: none;
+        color: $font-color-body;
+      }
     }
-
   }
 }
+
+
+.title {
+  padding-left: 30px;
+}
+
+.office-table {
+  width: calc(100vw - 900px);
+  &__body {
+
+  }
+  &__column {
+    &--name {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--overview {
+      padding-left: 5px;
+      width: 30%;
+      height: 200px;
+    }
+    &--ceo {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--foundation {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--revenue {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--people {
+      padding-left: 5px;      
+      width: 30%;
+      height: 50px;
+    }
+    &--address {
+      padding-left: 5px;
+      width: 30%;
+      height: 200px;
+    }
+  }
+}
+
+// .google-gmap {
+//   position: relative;
+//   padding-bottom: 56.25%;
+//   padding-top: 30px;
+//   height: 0;
+//   overflow: hidden;
+// }
+// .google-gmap iframe,
+// .google-gmap object,
+// .google-gmap embed {
+//   position: absolute;
+//   top: 500;
+//   left: 500;
+//   width: 500px;
+//   height: 500px;
+// }

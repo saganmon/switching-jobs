@@ -39,59 +39,8 @@
           %th.conditions-table__column--edit
             編集/削除
       - @conditions.each do |c|
-        %tbody.conditions-table__body
-          %tr.conditions-table__column
-            %td.conditions-table__column--status
-              = c.phase_i18n
-            %td.conditions-table__column--result
-              = c.result_i18n
-            %td.conditions-table__column--company-name
-              = c.office.company_name
-            %td.conditions-table__column--company-area
-              = c.office.area
-            %td.conditions-table__column--date
-              = c.date
-            %td.conditions-table__column--memo
-              = c.memo
-            %td.conditions-table__column--edit
-              = link_to edit_condition_path(c) do
-                = icon('fas', 'edit', class: "button")
-              = link_to condition_path(c), method: :delete do
-                = icon('fas', 'trash-alt', class: "button")
+        = render partial: "conditions/condition", locals: { condition: c }
 
 .modal
   .modal__items
-    %h3 活動記録
-    = form_for @condition, html: { class: "new-status" } do |f|
-      .new-status__field
-        = icon('far', 'building', class: "button")
-        = f.label :text, "企業名"
-        %br
-        = f.collection_select :office_id, Office.all, :id, :company_name, include_blank: true, class: 'new-status__field--companies'
-        %br
-        %br
-        = icon('fas', 'info', class: "button")
-        = f.label :text, "フェーズ"
-        %br
-        = f.select :phase, Condition.phases_i18n.invert, {}, include_blank: true, class: 'new-status__field--phases'
-        %br
-        %br
-        = icon('fas', 'question-circle', class: "button")
-        = f.label :text, "結果"
-        %br
-        = f.select :result, Condition.results_i18n.invert, {}, include_blank: true, class: 'new-status__field--results'
-        %br
-        %br
-        = icon('far', 'calendar', class: "button")
-        = f.label :text, "次回日程"
-        %br
-        = f.text_field :date, class: 'new-status__field--date', placeholder: 'e.g. 2020/1/1 10:00-11:00'
-        %br
-        %br
-        = icon('far', 'sticky-note', class: "button")
-        = f.label :text, "メモ"
-        %br
-        = f.text_field :memo, class: 'new-status__field--memo', placeholder: 'ご自由に使ってください'
-        %br
-        %br
-        = f.submit 'Send', class: 'new-status__send'
+    = render partial: "conditions/form", locals: { condition: @condition }

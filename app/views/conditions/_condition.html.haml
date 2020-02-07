@@ -1,0 +1,19 @@
+%tbody.conditions-table__body
+  %tr.conditions-table__column
+    %td.conditions-table__column--status
+      = condition.phase_i18n
+    %td.conditions-table__column--result
+      = condition.result_i18n
+    %td.conditions-table__column--company-name
+      = condition.office.company_name
+    %td.conditions-table__column--company-area
+      = condition.office.area
+    %td.conditions-table__column--date
+      = condition.date
+    %td.conditions-table__column--memo
+      = condition.memo
+    %td.conditions-table__column--edit
+      = link_to edit_condition_path(condition) do
+        = icon('fas', 'edit', class: "button")
+      = link_to condition_path(condition), method: :delete do
+        = icon('fas', 'trash-alt', class: "button")

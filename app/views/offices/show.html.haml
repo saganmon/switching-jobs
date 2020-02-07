@@ -1,0 +1,55 @@
+.header
+  .header__title
+    転職サプリ
+  .header__contents
+    - if user_signed_in?
+      .header__contents--name
+        ようこそ #{current_user.nickname} さん
+      .header__contents--button
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      .header__contents--name
+        = link_to "新規登録", new_user_registration_path
+      .header__contents--button
+        = link_to "ログイン", new_user_session_path
+
+.body-offices
+  .body-offices__list
+    %br
+    %table.office-table
+      %tbody.office-table__body
+        %tr.office-table__column---title
+          %th.office-table__column--name
+            企業名
+          %td.office-table__column--name--item
+            = @office.company_name
+        %tr.office-table__column---title
+          %th.office-table__column--overview
+            事業内容
+          %td.office-table__column--overview--item
+            = @office.overview
+        %tr.office-table__column---title
+          %th.office-table__column--ceo
+            代表取締役社長
+          %td.office-table__column--ceo--item
+            = @office.ceo
+        %tr.office-table__column---title
+          %th.office-table__column--foundation
+            設立年月日
+          %td.office-table__column--foundation--item
+            = @office.foundation
+        %tr.office-table__column---title
+          %th.office-table__column--revenue
+            売上高
+          %td.office-table__column--revenue--item
+            = @office.revenue
+        %tr.office-table__column---title
+          %th.office-table__column--people
+            従業員数
+          %td.office-table__column--people--item
+            = @office.people
+        %tr.office-table__column---title
+          %th.office-table__column--address
+            本社住所
+          %td.office-table__column--address--item
+            = @office.address

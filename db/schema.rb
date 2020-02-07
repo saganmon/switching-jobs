@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_07_055715) do
+ActiveRecord::Schema.define(version: 2020_02_07_082538) do
 
   create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "phase"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_02_07_055715) do
     t.string "area"
     t.integer "revenue"
     t.string "address"
+    t.string "coordinates"
     t.index ["company_name"], name: "index_offices_on_company_name"
   end
 

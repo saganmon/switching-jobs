@@ -41,22 +41,4 @@
           %th.offices-table__column--revenue
             詳細
 
-      - @offices.each do |office|
-        %tbody.offices-table__body--items
-          %tr.offices-table__column--items
-            %td.offices-table__column--area
-              = office.area
-            %td.offices-table__column--name
-              = office.company_name
-            %td.offices-table__column--overview
-              = office.overview
-            %td.offices-table__column--address
-              = office.address
-            %td.offices-table__column--people
-              = office.people
-            %td.offices-table__column--revenue
-              = office.revenue
-            %td.offices-table__column--button
-              = icon('far', 'building', class: "button")
-
--# = render @office
+      = render @offices
