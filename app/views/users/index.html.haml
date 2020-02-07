@@ -16,4 +16,7 @@
     .menu-items__conditions--text
       あなたの転職活動の状況を確認しましょう。
     .menu-items__conditions--link
+      -# - if current_user.admin?
+      -#   = link_to "Go", admin_conditions_path
+      -# - else
       = link_to "Go", user_path(current_user)

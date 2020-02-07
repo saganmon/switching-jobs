@@ -1,6 +1,5 @@
 class Condition < ApplicationRecord
   belongs_to :office
-  # belongs_to :user, dependent: :destroy
   belongs_to :user
 
   validates :phase, :date, :result, presence: true

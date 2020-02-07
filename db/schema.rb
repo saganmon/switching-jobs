@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_05_054346) do
+ActiveRecord::Schema.define(version: 2020_02_07_055715) do
 
   create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "phase"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_02_05_054346) do
     t.datetime "updated_at", null: false
     t.string "area"
     t.integer "revenue"
+    t.string "address"
     t.index ["company_name"], name: "index_offices_on_company_name"
   end
 
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_02_05_054346) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "nickname"
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

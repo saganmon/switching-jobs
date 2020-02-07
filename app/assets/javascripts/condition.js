@@ -2,51 +2,36 @@ $(function(){
   function buildHTML(condition){
     var html =
       `<tbody class="conditions-table__body">
-        <tr>
-          <td>
-            <div class:="conditions-table__column--status">
-              ${condition.phase}
-            </div>
+        <tr class="conditions-table__column">
+          <td class="conditions-table__column--status">
+            ${condition.phase}
           </td>
-          <td>
-            <div class:="conditions-table__column--result">
-              ${condition.result}
-            </div>
+          <td class:="conditions-table__column--result">
+            ${condition.result}
           </td>
-          <td>
-            <div class:="conditions-table__column--company-name">
-              ${condition.company_name}
-            </div>
+          <td class:="conditions-table__column--company-name">
+            ${condition.company_name}
           </td>
-          <td>
-            <div class:="conditions-table__column--company-area">
-              ${condition.area}
-            </div>
+          <td class:="conditions-table__column--company-area">
+            ${condition.area}
           </td>
-          <td>
-            <div class:="conditions-table__column--date">
-              ${condition.date}
-            </div>
+          <td class:="conditions-table__column--date">
+            ${condition.date}
           </td>
-          <td>
-            <div class:="conditions-table__column--memo">
-              ${condition.memo}
-            </div>
+          <td class:="conditions-table__column--memo">
+            ${condition.memo}
           </td>
-          <td>
-            <div class:="conditions-table__column--edit">
-              <a href="/conditions/${condition.id}/edit"><i class="fas fa-edit button"></i></a>
-              <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}"><i class="fas fa-trash-alt button"></i></a>
-            </div>
+          <td class:="conditions-table__column--edit">
+            <a href="/conditions/${condition.id}/edit"><i class="fas fa-edit button"></i></a>
+            <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}"><i class="fas fa-trash-alt button"></i></a>
           </td>
         </tr>
       </tbody>`
     return html
   }
+  
 
-
-
-  $('.body__new').on('click', function(){
+  $('.body-conditions__new--button').on('click', function(){
     // console.log(this);
     $('.modal').fadeIn("slow");
 

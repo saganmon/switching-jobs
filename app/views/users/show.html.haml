@@ -17,68 +17,51 @@
 
 .body-conditions
   .body-conditions__new
-    -# = link_to new_condition_path do
-    %button.body__new--button 活動登録
-
+    %button.body-conditions__new--button
+      活動登録
   .body-conditions__list
     %br
     %table.conditions-table
       %tbody.conditions-table__body.title
         %tr.conditions-table__column.title
-          %th
-            %div(class: conditions-table__column--status)
-              状況
-          %th
-            %div(class: conditions-table__column--result)
-              結果
-          %th
-            %div(class: conditions-table__column--company-name)
-              企業名
-          %th
-            %div(class: conditions-table__column--company-area)
-              地域
-          %th
-            %div(class: conditions-table__column--date)
-              次回日程
-          %th
-            %div(class: conditions-table__column--memo)
-              メモ
-          %th
-            %div(class: conditions-table__column--edit)
-              編集/削除
+          %th.conditions-table__column--status
+            状況
+          %th.conditions-table__column--result
+            結果
+          %th.conditions-table__column--company-name
+            企業名
+          %th.conditions-table__column--company-area
+            地域
+          %th.conditions-table__column--date
+            次回日程
+          %th.conditions-table__column--memo
+            メモ
+          %th.conditions-table__column--edit
+            編集/削除
       - @conditions.each do |c|
         %tbody.conditions-table__body
-          %tr
-            %td
-              %div(class: conditions-table__column--status)
-                = c.phase_i18n
-            %td
-              %div(class: conditions-table__column--result)
-                = c.result_i18n
-            %td
-              %div(class: conditions-table__column--company-name)
-                = c.office.company_name
-            %td
-              %div(class: conditions-table__column--company-area)
-                = c.office.area
-            %td
-              %div(class: conditions-table__column--date)
-                = c.date
-            %td
-              %div(class: conditions-table__column--memo)
-                = c.memo
-            %td
-              %div(class: conditions-table__column--edit)
-                = link_to edit_condition_path(c) do
-                  = icon('fas', 'edit', class: "button")
-                = link_to condition_path(c), method: :delete do
-                  = icon('fas', 'trash-alt', class: "button")
-
+          %tr.conditions-table__column
+            %td.conditions-table__column--status
+              = c.phase_i18n
+            %td.conditions-table__column--result
+              = c.result_i18n
+            %td.conditions-table__column--company-name
+              = c.office.company_name
+            %td.conditions-table__column--company-area
+              = c.office.area
+            %td.conditions-table__column--date
+              = c.date
+            %td.conditions-table__column--memo
+              = c.memo
+            %td.conditions-table__column--edit
+              = link_to edit_condition_path(c) do
+                = icon('fas', 'edit', class: "button")
+              = link_to condition_path(c), method: :delete do
+                = icon('fas', 'trash-alt', class: "button")
 
 .modal
   .modal__items
     %h3 活動記録
-
     = form_for @condition, html: { class: "new-status" } do |f|
       .new-status__field
         = icon('far', 'building', class: "button")
@@ -102,12 +85,13 @@
         = icon('far', 'calendar', class: "button")
         = f.label :text, "次回日程"
         %br
+        = f.text_field :date, class: 'new-status__field--date', placeholder: 'e.g. 2020/1/1 10:00-11:00'
         %br
-        = f.text_field :date, class: 'new-status__field--date', placeholder: 'e.g.2020-01-01'
         %br
         = icon('far', 'sticky-note', class: "button")
         = f.label :text, "メモ"
         %br
-        = f.text_field :memo, class: 'new-status__field--memo', placeholder: 'e.g.ご自由に使ってください'
+        = f.text_field :memo, class: 'new-status__field--memo', placeholder: 'ご自由に使ってください'
+        %br
         %br
         = f.submit 'Send', class: 'new-status__send'
