@@ -1,3 +1,172 @@
-// Place all the styles related to the offices controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "modules/fonts";
+
+th, td {
+  border-top: 1px solid #bbb;
+  height: 50px;
+  font-family: $font-family;
+  font-size: $font-size-body;
+  color: $font-color-body;  
+}
+
+tr {
+  background-color: ghostwhite;
+  transition: opacity 1s;
+  transition-property: background-color;
+}
+
+th {
+  font-weight: bold;
+  border-bottom: 1px solid #bbb;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.comp {
+  color: $font-color-subtitle-comp;
+}
+
+.body-offices {
+  height: 100vh;
+  width: 100vw;
+  padding: 120px 50px 50px 50px;
+  background-image: url("/images/company_list_image.png");
+  background-size: cover;
+  &__import {
+    height: 70px;
+    width: 400px;
+    // margin-bottom: 20px;
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-body;
+    color: $font-color-subtitle-comp;
+    &--form {
+      height: 50px;
+      width: 300px;
+    }
+    &--file {
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-body-comp;
+    }
+    &--button {
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-body;
+    }
+  }
+  &__find {
+    &--box {
+      font-family: $font-family;
+      height: 30px;
+      width: 300px;
+    }
+  }
+
+  &__list {
+    height: calc(100% - 50px);
+    width: 90%;
+  }
+}
+
+.title {
+  padding-left: 30px;
+}
+
+.offices-table {
+  width: calc(100vw - 600px);
+  &__body {
+  }
+  &__column {
+    position: sticky;
+    z-index: 1;
+    &--area {
+      padding-left: 5px;
+      width: 10%;
+    }
+    &--name {
+      padding-left: 5px;
+      width: 20%;
+    }
+    &--people {
+      padding-left: 5px;      
+      width: 10%;
+    }
+    &--revenue {
+      padding-left: 5px;
+      width: 10%;
+    }
+    &--url {
+      padding-left: 5px;
+      width: 20%;
+      a {
+        text-decoration: none;
+        color: $font-color-body;
+      }
+    }
+    &--button {
+      padding-left: 5px;
+      width: 5%;
+      a {
+        text-decoration: none;
+        color: $font-color-body;
+      }
+    }
+  }
+}
+
+.office-table {
+  width: calc(100vw - 900px);
+  &__body {
+
+  }
+  &__column {
+    &--name {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--overview {
+      padding-left: 5px;
+      width: 30%;
+      height: 200px;
+    }
+    &--ceo {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--foundation {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--revenue {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+    }
+    &--people {
+      padding-left: 5px;      
+      width: 30%;
+      height: 50px;
+    }
+    &--address {
+      padding-left: 5px;
+      width: 30%;
+      height: 200px;
+    }
+    &--url {
+      padding-left: 5px;
+      width: 30%;
+      height: 50px;
+      &--item {
+        a {
+          text-decoration: none;
+          color: $font-color-body;
+        } 
+      }
+    }
+  }
+}

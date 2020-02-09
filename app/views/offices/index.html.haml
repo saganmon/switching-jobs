@@ -1,36 +1,32 @@
-.h2 企業の取り込み
-= form_tag import_offices_path, multipart: true do
-  = file_field_tag :file
-  = submit_tag "Import"
+= render 'shared/header'
 
-%br
-%table.my_page_info
-  %tr
-    %td
-      企業名
-    %td
-      会社概要
-    %td
-      代表取締役
-    %td
-      設立年月日
-    %td
-      従業員数
-  - @offices.each do |office|
-    %tr
-      %td
-        = office.company_name
-      %td
-        = office.overview
-      %td
-        = office.ceo
-      %td
-        = office.foundation
-      %td
-        = office.people
+.body-offices
+  .body-offices__import
+    -if current_user.admin?
+      %h3.comp 企業の取り込み
+      = form_tag import_offices_path, multipart: true, class: "body__import--form" do
+        = file_field_tag :file, class: "body__import--file"
+        = submit_tag "Import", class: "body__import--button"
 
+  .body-offices__find
+    %input.body-offices__find--box{type: "text", placeholder: "検索ワード"}
 
+  .body-offices__list
+    %br
+    %table.offices-table
+      %tbody.offices-table__body.title
+        %tr.offices-table__column.title
+          %th.offices-table__column--area
+            地域
+          %th.offices-table__column--name
+            企業名
+          %th.offices-table__column--people
+            従業員数
+          %th.offices-table__column--revenue
+            売上高
+          %th.offices-table__column--url
+            ホームページ
+          %th.offices-table__column--revenue
+            詳細
 
--# = form_for import_offices_path, method: :post do |f|
--#   = f.file_field :file
--#   = f.submit 'Send'
+      = render @offices

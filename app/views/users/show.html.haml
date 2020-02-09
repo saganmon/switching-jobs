@@ -1,0 +1,38 @@
+= render 'shared/header'
+
+.body-conditions
+  .body-conditions__new
+    %button.body-conditions__new--button
+      活動登録
+
+  .body-conditions__find
+    %input.body-conditions__find--box{type: "text", placeholder: "検索ワード"}
+    
+  .body-conditions__list
+    %br
+    %table.conditions-table
+      %tbody.conditions-table__body.title
+        %tr.conditions-table__column.title
+          - if current_user.admin?
+            %th.conditions-table__column--user
+              ユーザー
+          %th.conditions-table__column--status
+            状況
+          %th.conditions-table__column--result
+            結果
+          %th.conditions-table__column--company-name
+            企業名
+          %th.conditions-table__column--company-area
+            地域
+          %th.conditions-table__column--date
+            次回日程
+          %th.conditions-table__column--memo
+            メモ
+          %th.conditions-table__column--edit
+            編集/削除
+      - @conditions.each do |c|
+        = render partial: "conditions/condition", locals: { condition: c }
+
+.modal-overlay
+  .modal-overlay__items
+    = render partial: "conditions/form", locals: { condition: @condition }

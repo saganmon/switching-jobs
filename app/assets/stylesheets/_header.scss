@@ -1,0 +1,37 @@
+@import "modules/fonts";
+
+.header {
+  height: 100px;
+  width: 100vw;
+  padding: 20px 40px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #bbb;
+  &__title {
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: $font-size-subtitle;
+    color: $font-color-subtitle-comp;
+  }
+  &__contents {
+    display: flex;
+    line-height: 50px;
+    &--name {
+      font-weight: bold;
+      font-family: $font-family;
+      font-size: $font-size-body;
+      color: $font-color-subtitle-comp;
+      margin-right: 20px;
+    }
+    &--button {
+      a {
+        font-weight: bold;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        color: $font-color-subtitle-comp;
+        text-decoration: none;
+      }
+    }
+  }
+}
