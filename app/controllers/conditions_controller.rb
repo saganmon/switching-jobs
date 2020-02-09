@@ -4,10 +4,6 @@ class ConditionsController < ApplicationController
   def welcome
   end
 
-  def new
-    @condition = Condition.new
-  end
-
   def create
     @condition = Condition.create(post_params)
     respond_to do |format|

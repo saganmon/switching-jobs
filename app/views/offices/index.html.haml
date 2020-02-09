@@ -1,17 +1,4 @@
-.header
-  .header__title
-    転職サプリ
-  .header__contents
-    - if user_signed_in?
-      .header__contents--name
-        ようこそ #{current_user.nickname} さん
-      .header__contents--button
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-    - else
-      .header__contents--name
-        = link_to "新規登録", new_user_registration_path
-      .header__contents--button
-        = link_to "ログイン", new_user_session_path
+= render 'shared/header'
 
 .body-offices
   .body-offices__import
@@ -21,23 +8,24 @@
         = file_field_tag :file, class: "body__import--file"
         = submit_tag "Import", class: "body__import--button"
 
+  .body-offices__find
+    %input.body-offices__find--box{type: "text", placeholder: "検索ワード"}
+
   .body-offices__list
     %br
     %table.offices-table
-      %tbody.offices-table__body---title
-        %tr.offices-table__column---title
+      %tbody.offices-table__body.title
+        %tr.offices-table__column.title
           %th.offices-table__column--area
             地域
           %th.offices-table__column--name
             企業名
-          %th.offices-table__column--overview
-            事業内容
-          %th.offices-table__column--address
-            本社住所
           %th.offices-table__column--people
             従業員数
           %th.offices-table__column--revenue
             売上高
+          %th.offices-table__column--url
+            ホームページ
           %th.offices-table__column--revenue
             詳細
 

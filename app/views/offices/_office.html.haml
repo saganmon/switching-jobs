@@ -1,16 +1,14 @@
-%tbody.offices-table__body--items
-  %tr.offices-table__column--items
+%tbody.offices-table__body
+  %tr.offices-table__column
     %td.offices-table__column--area
       = office.area
     %td.offices-table__column--name
       = office.company_name
-    %td.offices-table__column--overview
-      = office.overview
-    %td.offices-table__column--address
-      = office.address
     %td.offices-table__column--people
-      = office.people
+      = converting_to_people(office.people)
     %td.offices-table__column--revenue
-      = office.revenue
+      = converting_to_jpy(office.revenue)
+    %td.offices-table__column--url
+      %a(href = '#{office.url}' target = '_blank')企業のページへ
     %td.offices-table__column--button
       = link_to "Go", office_path(office)

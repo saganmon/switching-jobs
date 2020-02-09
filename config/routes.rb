@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'conditions#welcome'
   
-  resources :conditions, only: [:new, :create, :edit, :update, :destroy] do
+  resources :conditions, only: [:create, :edit, :update, :destroy] do
     collection do
       get :welcome
     end

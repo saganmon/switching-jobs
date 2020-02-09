@@ -1,7 +1,8 @@
 @import "reset";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "modules/flash";
+@import "header";
 @import "users";
 @import "offices";
-@import "conditions";
-@import "modules/flash";
+@import "devise"

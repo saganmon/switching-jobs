@@ -1,5 +1,8 @@
 %tbody.conditions-table__body
   %tr.conditions-table__column
+    -if current_user.admin?
+      %td.conditions-table__column--user
+        = condition.user.nickname
     %td.conditions-table__column--status
       = condition.phase_i18n
     %td.conditions-table__column--result

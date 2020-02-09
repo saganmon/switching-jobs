@@ -1,29 +1,21 @@
-.header
-  .header__title
-    転職サプリ
-  .header__contents
-    - if user_signed_in?
-      .header__contents--name
-        ようこそ #{current_user.nickname} さん
-      .header__contents--button
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-        -# = link_to "ログアウト", destroy_user_session_path, method: :delete do
-        -#   = icon('fas', 'sign-out-alt', class: "button")
-    - else
-      .header__contents--name
-        = link_to "新規登録", new_user_registration_path
-      .header__contents--button
-        = link_to "ログイン", new_user_session_path
+= render 'shared/header'
 
 .body-conditions
   .body-conditions__new
     %button.body-conditions__new--button
       活動登録
+
+  .body-conditions__find
+    %input.body-conditions__find--box{type: "text", placeholder: "検索ワード"}
+    
   .body-conditions__list
     %br
     %table.conditions-table
       %tbody.conditions-table__body.title
         %tr.conditions-table__column.title
+          - if current_user.admin?
+            %th.conditions-table__column--user
+              ユーザー
           %th.conditions-table__column--status
             状況
           %th.conditions-table__column--result
@@ -41,6 +33,6 @@
       - @conditions.each do |c|
         = render partial: "conditions/condition", locals: { condition: c }
 
-.modal
-  .modal__items
+.modal-overlay
+  .modal-overlay__items
     = render partial: "conditions/form", locals: { condition: @condition }

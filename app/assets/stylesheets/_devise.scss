@@ -1,0 +1,12 @@
+@import "modules/fonts";
+
+h4 {
+  font-weight: bold;
+  font-size: 25pt;
+  color: $font-color-subtitle;
+}
+
+.field {
+  height: 50px;
+  width: 200px;
+}

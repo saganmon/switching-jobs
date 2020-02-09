@@ -22,8 +22,14 @@ $(function(){
             ${condition.memo}
           </td>
           <td class:="conditions-table__column--edit">
-            <a href="/conditions/${condition.id}/edit"><i class="fas fa-edit button"></i></a>
-            <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}"><i class="fas fa-trash-alt button"></i></a>
+            <a href="/conditions/${condition.id}/edit">
+              <i class="fas fa-edit button">
+              </i>
+            </a>
+            <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}">
+              <i class="fas fa-trash-alt button">
+              </i>
+            </a>
           </td>
         </tr>
       </tbody>`
@@ -33,7 +39,11 @@ $(function(){
 
   $('.body-conditions__new--button').on('click', function(){
     // console.log(this);
-    $('.modal').fadeIn("slow");
+    $('.modal-overlay').fadeIn("slow");
+
+    // $('.modal-overlay').unbind().click(function(){
+    //   $('.modal-overlay').fadeOut("slow");
+    // })
 
     $('#new_condition').on('submit', function(e) {
       e.preventDefault();
@@ -55,7 +65,32 @@ $(function(){
       .fail(function(){
         alert('Ajax通信に失敗しました');
       })
-      $('.modal').fadeOut("slow");
+      $('.modal-overlay').fadeOut("slow");
     })
   })
+
+  $('.body-conditions__find--box').on('keyup', function() {
+    var keyword = $(this).val();
+    var regExp = new RegExp(keyword);
+
+    $('.conditions-table').find('tr').hide().each(function() {
+      var tr = $(this);
+      $(this).find('td').each(function() {
+        if($(this).text().match(regExp)) {
+          tr.show();
+        }
+      })
+    })
+  })
+
+  // $('.conditions-table__column').mouseover(function(){
+  $('.conditions-table__column').mouseover(function(){
+    // console.log("mouseover");
+    $(this).css('backgroundColor', 'aquamarine')
+  })
+
+  $('.conditions-table__column').mouseleave(function(){
+    $(this).css('backgroundColor', 'ghostwhite')
+  })
+
 })

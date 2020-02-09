@@ -1,7 +1,10 @@
+@import "fonts";
+
 .notification {
   .notice {
-    background-color: lightskyblue;
-    color: dimgray;
+    font-family: $font-family;
+    background-color: aquamarine;
+    color: rgb(20, 19, 19);
     text-align: center;
   }
 
