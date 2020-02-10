@@ -1,4 +1,5 @@
 class OfficesController < ApplicationController
+  before_action :login_check, only: [:index, :show, :import]
 
   def index
     @offices = Office.all
