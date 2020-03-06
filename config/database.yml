@@ -47,8 +47,15 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: switching-jobs_production
+#   username: switching-jobs
+#   password: <%= ENV['SWITCHING-JOBS_DATABASE_PASSWORD'] %>
+
 production:
+#半角スペース２個分の空白を開ける
   <<: *default
-  database: switching-jobs_production
-  username: switching-jobs
-  password: <%= ENV['SWITCHING-JOBS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
