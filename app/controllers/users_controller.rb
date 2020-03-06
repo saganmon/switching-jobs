@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+  before_action :login_check, only: [:index, :show]
+
+  def index
+  end
 
   def show
-    if user_signed_in?
-      @condition = Condition.new
-      set_conditions
-    else redirect_to conditions_path
-    end
+    @condition = Condition.new
+    set_conditions
   end
 
   private

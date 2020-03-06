@@ -1,8 +1,5 @@
 class ConditionsController < ApplicationController
-  # before_action :set_condition, only: [:update, :destroy]
-
-  def welcome
-  end
+  before_action :login_check, only: [:create, :edit, :update, :destroy]
 
   def create
     @condition = Condition.create(post_params)
