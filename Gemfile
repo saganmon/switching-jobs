@@ -46,7 +46,12 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'faker', "~> 2.8"
-  # gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイのため
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+    # gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイのため
 end
 
 group :development do
@@ -66,9 +71,10 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-# group :production do
-#   gem 'pg'
-# end
+group :production do
+  gem 'unicorn', '5.4.1'
+  # gem 'pg'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
