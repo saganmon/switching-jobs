@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(condition){
-    var html =
       `<tbody class="conditions-table__body">
         <tr class="conditions-table__column">
           <td class="conditions-table__column--status">
@@ -36,15 +35,8 @@ $(function(){
     return html
   }
   
-
   $('.body-conditions__new--button').on('click', function(){
-    // console.log(this);
     $('.modal-overlay').fadeIn("slow");
-
-    // $('.modal-overlay').unbind().click(function(){
-    //   $('.modal-overlay').fadeOut("slow");
-    // })
-
     $('#new_condition').on('submit', function(e) {
       e.preventDefault();
       var formData = new FormData(this);
@@ -83,7 +75,6 @@ $(function(){
     })
   })
 
-  // $('.conditions-table__column').mouseover(function(){
   $('.conditions-table__column').mouseover(function(){
     // console.log("mouseover");
     $(this).css('backgroundColor', 'aquamarine')
@@ -92,5 +83,45 @@ $(function(){
   $('.conditions-table__column').mouseleave(function(){
     $(this).css('backgroundColor', 'ghostwhite')
   })
-
 })
+
+
+      // var html = $("<tbody></tbody>", {
+      //   "class": "conditions-table__body"
+      // });
+      // $(html).append("<tr></tr>", {
+      //   "class": "conditions-table__column"
+      // });
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--status"
+      // }).text(condition.phase);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--result"
+      // }).text(condition.result);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--company-name"
+      // }).text(condition.company_name);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--company-area"
+      // }).text(condition.area);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--date"
+      // }).text(condition.date);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--memo"
+      // }).text(condition.memo);
+      // $(html).append("<td></td>", {
+      //   "class": "conditions-table__column--edit"
+      // }).attr({
+      //   href: "/conditions/" + condition.id + "/edit"
+      // }).append("<i></i>", {
+      //   class: "fas fa-edit button"
+      // }).attr({
+      //   href: "/conditions/" + condition.id + "/edit",
+      //   rel: "nofollow",
+      //   data-method: "delete",
+      //   href: "/conditions/" + condition.id
+      // }).append("<i></i>", {
+      //   class: "fas fa-trash-alt button"
+      // });
+  
