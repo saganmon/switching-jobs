@@ -18,7 +18,7 @@ class Office < ApplicationRecord
   private
   # 更新を許可するカラムを定義
   def self.updatable_attributes
-    ["company_name", "overview", "ceo", "foundation", "people", "area", "revenue", "address", "url"]
+    ["company_name", "overview", "ceo", "foundation", "poople", "area", "revenue", "address", "url"]
   end
 
 end
