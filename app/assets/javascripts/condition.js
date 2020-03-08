@@ -19,11 +19,15 @@ $(function(){
             ${condition.date}
           </td>
           <td class="conditions-table__column--memo">
-          ${condition.memo}
+            ${condition.memo}
           </td>
           <td class="conditions-table__column--edit">
-            <a href="/conditions/50/edit"><i class="fas fa-edit button"></i></a>
-            <a rel="nofollow" data-method="delete" href="/conditions/50"><i class="fas fa-trash-alt button"></i></a>
+            <a href="/conditions/${condition.id}/edit">
+              <i class="fas fa-edit button"></i>
+            </a>
+            <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}">
+              <i class="fas fa-trash-alt button"></i>
+            </a>
           </td>
         </tr>
       </tbody>`
