@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイの場合削除
+# gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイの場合削除
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -51,7 +51,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-    # gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイのため
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0' # herokuデプロイのため
 end
 
 group :development do
@@ -72,7 +72,8 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'pg'
+  # gem 'unicorn', '5.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -81,16 +82,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "better_errors"
 gem "binding_of_caller"
 gem 'pry-rails'
-
 gem 'devise'
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'font-awesome-sass'
-
-gem 'faraday'
-gem 'httpclient'
-
-gem 'mechanize'
-
 gem 'roo'
-
 gem 'enum_help'
