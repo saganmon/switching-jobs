@@ -5,9 +5,9 @@
     %td.offices-table__column--name
       = office.company_name
     %td.offices-table__column--people
-      = converting_to_people(office.poople)
+      = converting_to_people(office&.poople)
     %td.offices-table__column--revenue
-      = converting_to_jpy(office.revenue)
+      = converting_to_jpy(office&.revenue)
     %td.offices-table__column--url
       %a(href = '#{office.url}' target = '_blank')企業のページへ
     %td.offices-table__column--button

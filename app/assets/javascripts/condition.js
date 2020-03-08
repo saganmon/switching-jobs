@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(condition) {
+    var html =
       `<tbody class="conditions-table__body">
         <tr class="conditions-table__column" style="background-color: ghostwhite;">
           <td class="conditions-table__column--status">

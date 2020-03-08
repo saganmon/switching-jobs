@@ -4,7 +4,7 @@ module OfficesHelper
     if people == 0
       "非公開"
     else
-      "#{people.to_s(:delimited, delimiter: ',')}名"
+      "#{people&.to_s(:delimited, delimiter: ',')}名"
     end
   end
 
@@ -12,7 +12,7 @@ module OfficesHelper
     if year == 0
       "非公開"
     else
-      "#{year.to_s}年"
+      "#{year&.to_s}年"
     end
   end
 
@@ -20,7 +20,7 @@ module OfficesHelper
     if money == 0
       "非公開"
     else
-      "#{money.to_s(:delimited, delimiter: ',')}万円"
+      "#{money&.to_s(:delimited, delimiter: ',')}万円"
     end
   end
 
