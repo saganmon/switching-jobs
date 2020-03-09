@@ -2,3 +2,11 @@
 
 <h2 align="center">転職サプリ</h2>
 
+## 🌐 App URL
+
+### **https://job-switch.herokuapp.com/**  
+　
+## 💬 Usage
+
+`$ git clone https://github.com/saganmon/switching-jobs.git`
+
