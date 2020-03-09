@@ -19,4 +19,13 @@
 `$ rails db:migrate`
 <br>
 `$ rails s`
+<br>
 👉 http://localhost:3000
+
+## 📦 Features
+
+<h3 align="center">- メニュー -</h3>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59816193/76178242-0e6d8c00-61fa-11ea-8af8-601032670bfc.png" width=40%>
+</p>
