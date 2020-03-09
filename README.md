@@ -26,7 +26,7 @@
 
 <h3 align="center">- メニュー -</h3>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59816193/76178690-8c7e6280-61fb-11ea-80a3-ea287871ef02.png" width=80%>
+  <img src="https://user-images.githubusercontent.com/59816193/76178879-4249b100-61fc-11ea-9ca5-f1d4433a97db.png" width=80%>
 </p>
 
 <h3 align="center">- 企業閲覧, 登録(管理者のみ) -</h3>
