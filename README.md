@@ -1,4 +1,4 @@
-![switching-jobs](https://〜.gif)
+![switching-jobs](https://user-images.githubusercontent.com/59816193/76177202-cac55300-61f6-11ea-9262-0526695e7417.png)
 
 <h2 align="center">Ramen Timer</h2>
 
