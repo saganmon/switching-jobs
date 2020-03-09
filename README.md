@@ -25,7 +25,7 @@
 ## 開発環境
 <ul>
   <li>開発言語: Ruby, Haml, SCSS</li>
-  <li>フレームワーク: Ruby on Rails/li>
+  <li>フレームワーク: Ruby on Rails</li>
   <li>OS：Mac</li>
   <li>DB：MySQL</li>
   <li>デプロイ先: heroku</li>
@@ -68,13 +68,13 @@
 
 <h3 align="center">- 企業閲覧, 登録(管理者のみ) -</h3>
 <ul>
-  <li>工夫したポイント　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
-  <li>一般ユーザー　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1</li>
+  <li>ポイント
+    <ul>
+      <li>管理者のみ企業のCSVアップロードが可能です</li>
+      <li>検索窓からレコードの絞り込みが可能です(jQueryで実装)</li>
+    </ul>
+  </li>
 </ul>
-
-・
-・使用技術(開発環境)
-・課題や今後実装したい機能
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178368-79b75e00-61fa-11ea-9b73-4eff9355664d.png" width=80%>
