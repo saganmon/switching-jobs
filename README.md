@@ -18,9 +18,10 @@
     </ul>
   </li>
 </ul>
-
+<br>
 ## 制作背景
 <p>転職をされる方が、何度も同じ企業のホームページを訪問する手間や、活動状況が分からなくなったりする不便を解消するために作成しました</p>
+<br>
 
 ## 開発環境
 <ul>
@@ -30,13 +31,13 @@
   <li>DB：MySQL</li>
   <li>デプロイ先: heroku</li>
 </ul>
+<br>
 
 ## 🌐 App URL
-
 ### **https://job-switch.herokuapp.com/**  
-　
-## 💬 Usage
+<br>
 
+## 💬 Usage
 `$ git clone https://github.com/saganmon/switching-jobs.git`
 <br>
 `$ cd switching-jobs`
@@ -50,18 +51,22 @@
 `$ rails s`
 <br>
 👉 http://localhost:3000
+<br>
 
 ## デモアカウント
 <ul>
   <li>管理者　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
   <li>一般ユーザー　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1</li>
 </ul>
+<br>
 
 ## 📦 Features
 <h3 align="center">- メニュー -</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178879-4249b100-61fc-11ea-9ca5-f1d4433a97db.png" width=80%>
 </p>
+<br>
+
 <h3 align="center">- 企業閲覧, 登録(管理者のみ) -</h3>
 <ul>
   <li>ポイント
@@ -74,6 +79,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178368-79b75e00-61fa-11ea-9b73-4eff9355664d.png" width=80%>
 </p>
+<br>
 
 <h3 align="center">- 活動閲覧 -</h3>
 <ul>
@@ -86,6 +92,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178940-7ae98a80-61fc-11ea-8839-fe10bd0b3075.png" width=80%>
 </p>
+<br>
 
 <h3 align="center">- 活動登録 -</h3>
 <ul>
@@ -100,6 +107,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76179059-d87dd700-61fc-11ea-94ef-c97219d981ee.png" width=80%>
 </p>
+<br>
 
 ## 課題と今後の実装
 <ul>
@@ -118,6 +126,7 @@
     </ul>
   </li>
 </ul>
+<br>
 
 ## DB設計
 <p align="center">
