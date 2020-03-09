@@ -1,12 +1,4 @@
-![switching-jobs](https://user-images.githubusercontent.com/59816193/76177202-cac55300-61f6-11ea-9262-0526695e7417.png)
+![switching-jobs](https://user-images.githubusercontent.com/59816193/76177565-fdbc1680-61f7-11ea-853f-b04f6943c2f9.png)
 
-<h2 align="center">Ramen Timer</h2>
+<h2 align="center">転職サプリ</h2>
 
-<p align="center">
-  <a href="vue公式サイトURL"><img src="https://〜.png" width="80px;" /></a>
-  <br>
-  <a href="PWA公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="Firebase公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="firealpaca公式サイトURL"><img src="https://〜.png" height="40px;" /></a>
-  <a href="sweetalert公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-</p>
