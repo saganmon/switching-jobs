@@ -2,6 +2,23 @@
 
 <h2 align="center">転職サプリ</h2>
 
+## 概要
+転職活動を支援するアプリケーションです。
+<ul>
+  <li>「企業を探す」
+    <ul>
+      <li>管理者：CSVフォーマットでの企業の一括取り込み。
+      <li>一般ユーザー：企業の閲覧、検索
+    </ul>
+  </li>
+  <li>「活動を見る」
+    <ul>
+      <li>管理者：活動の登録、全ユーザーの活動の閲覧/検索
+      <li>一般ユーザー：活動の登録/閲覧/検索
+    </ul>
+  </li>
+</ul>
+
 ## 🌐 App URL
 
 ### **https://job-switch.herokuapp.com/**  
@@ -22,10 +39,12 @@
 <br>
 👉 http://localhost:3000
 
+
+
 ## デモアカウント
 <ul>
-  <li>管理者　 ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
-  <li>デモ用　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1<li>
+  <li>管理者　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
+  <li>一般ユーザー　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1</li>
 </ul>
 
 ## 📦 Features
@@ -36,6 +55,11 @@
 </p>
 
 <h3 align="center">- 企業閲覧, 登録(管理者のみ) -</h3>
+<ul>
+  <li>管理者　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
+  <li>一般ユーザー　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1</li>
+</ul>
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178368-79b75e00-61fa-11ea-9b73-4eff9355664d.png" width=80%>
 </p>
