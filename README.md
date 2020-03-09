@@ -132,5 +132,5 @@
 
 ## 🔒DB設計
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59816193/76184694-2d771880-6210-11ea-9870-9a374c791650.png" width=80%>
+  <img src="https://user-images.githubusercontent.com/59816193/76186633-497db880-6216-11ea-8423-4f8e2c0d1a86.png" width=80%>
 </p>
