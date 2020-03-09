@@ -51,8 +51,6 @@
 <br>
 👉 http://localhost:3000
 
-
-
 ## デモアカウント
 <ul>
   <li>管理者　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
@@ -60,12 +58,10 @@
 </ul>
 
 ## 📦 Features
-
 <h3 align="center">- メニュー -</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178879-4249b100-61fc-11ea-9ca5-f1d4433a97db.png" width=80%>
 </p>
-
 <h3 align="center">- 企業閲覧, 登録(管理者のみ) -</h3>
 <ul>
   <li>ポイント
@@ -75,18 +71,32 @@
     </ul>
   </li>
 </ul>
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178368-79b75e00-61fa-11ea-9b73-4eff9355664d.png" width=80%>
 </p>
 
-
 <h3 align="center">- 活動閲覧 -</h3>
+<ul>
+  <li>ポイント
+    <ul>
+      <li>検索窓からレコードの絞り込みが可能です(jQueryで実装)</li>
+    </ul>
+  </li>
+</ul>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178940-7ae98a80-61fc-11ea-8839-fe10bd0b3075.png" width=80%>
 </p>
 
 <h3 align="center">- 活動登録 -</h3>
+<ul>
+  <li>ポイント
+    <ul>
+      <li>活動登録のボタンをクリックするとモーダルウィンドウが表示され、活動を入力することができます</li>
+      <li>ユーザーの入力の手間を省けるよう、セレクトボックスを多用しています</li>
+      <li>登録した内容は、Ajaxで追加されます</li>
+    </ul>
+  </li>
+</ul>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76179059-d87dd700-61fc-11ea-94ef-c97219d981ee.png" width=80%>
 </p>
