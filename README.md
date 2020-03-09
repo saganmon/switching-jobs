@@ -10,3 +10,10 @@
 
 `$ git clone https://github.com/saganmon/switching-jobs.git`
 
+$ git clone https://github.com/aocattleya/hoge.git
+$ cd hoge
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
