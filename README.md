@@ -100,3 +100,26 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76179059-d87dd700-61fc-11ea-94ef-c97219d981ee.png" width=80%>
 </p>
+
+## 課題と今後の実装
+<ul>
+  <li>課題
+    <ul>
+      <li>管理者ページが未実装</li>
+      <li>管理者によるCSV取り込みにおいて、企業を追加する際の動作が不安定（idが連番になっていないとエラーが発生する場合がある）</li>
+      <li>活動入力において、日付を入れる際に手間がかかる</li>
+      <li>名寄せを実装していないため、今度集計機能を実装する際に正確な集計ができない恐れがある</li>      
+    </ul>
+  </li>
+  <li>今後の実装
+    <ul>
+      <li>管理者ページの実装</li>
+      <li>上記課題の解決</li>
+    </ul>
+  </li>
+</ul>
+
+## DB設計
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59816193/76184694-2d771880-6210-11ea-9870-9a374c791650.png" width=80%>
+</p>
