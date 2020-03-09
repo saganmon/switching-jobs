@@ -9,10 +9,14 @@
 ## 💬 Usage
 
 `$ git clone https://github.com/saganmon/switching-jobs.git`
-`$ git clone https://github.com/aocattleya/hoge.git`
-`$ cd hoge`
+<br>
+`$ cd switching-jobs`
+<br>
 `$ bundle install`
+<br>
 `$ rails db:create`
+<br>
 `$ rails db:migrate`
+<br>
 `$ rails s`
 👉 http://localhost:3000
