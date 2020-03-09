@@ -2,7 +2,7 @@
 
 <h2 align="center">転職サプリ</h2>
 
-## 概要
+## 📗 概要
 転職活動を支援するアプリケーションです。
 <ul>
   <li>「企業を探す」
@@ -20,11 +20,11 @@
 </ul>
 <br>
 
-## 制作背景
+## ⭐ 制作背景
 <p>転職をされる方が、何度も同じ企業のホームページを訪問する手間や、活動状況が分からなくなったりする不便を解消するために作成しました</p>
 <br>
 
-## 開発環境
+## 💻 開発環境
 <ul>
   <li>開発言語: Ruby, Haml, SCSS</li>
   <li>フレームワーク: Ruby on Rails</li>
@@ -55,7 +55,7 @@
 <br>
 <br>
 
-## デモアカウント
+## 👀 デモアカウント
 <ul>
   <li>管理者　　　　ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
   <li>一般ユーザー　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1</li>
@@ -111,7 +111,7 @@
 </p>
 <br>
 
-## 課題と今後の実装
+## 🔥 課題と今後の実装
 <ul>
   <li>課題
     <ul>
@@ -130,7 +130,7 @@
 </ul>
 <br>
 
-## DB設計
+## 🔒DB設計
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76184694-2d771880-6210-11ea-9870-9a374c791650.png" width=80%>
 </p>
