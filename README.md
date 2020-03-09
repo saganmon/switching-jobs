@@ -35,14 +35,12 @@
 </p>
 
 
-<h3 align="center">- メニュー -</h3>
+<h3 align="center">- 活動閲覧 -</h3>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59816193/76178242-0e6d8c00-61fa-11ea-8af8-601032670bfc.png" width=80%>
+  <img src="https://user-images.githubusercontent.com/59816193/76178940-7ae98a80-61fc-11ea-8839-fe10bd0b3075.png" width=80%>
 </p>
 
-
-
-<h3 align="center">- メニュー -</h3>
+<h3 align="center">- 活動登録 -</h3>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59816193/76178242-0e6d8c00-61fa-11ea-8af8-601032670bfc.png" width=80%>
+  <img src="https://user-images.githubusercontent.com/59816193/76179059-d87dd700-61fc-11ea-94ef-c97219d981ee.png" width=80%>
 </p>
