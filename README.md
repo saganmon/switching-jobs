@@ -27,8 +27,10 @@
 <h3 align="center">- メニュー -</h3>
 <ul>
   <li>デモアカウント
-    <li> <管理者>　 ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
-		<li> <デモ用>　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1<li>
+    <ul>
+      <li> <管理者>　 ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
+      <li> <デモ用>　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1<li>
+    </ul>
   </li>
 </ul>
 <p align="center">
