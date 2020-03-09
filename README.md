@@ -22,9 +22,7 @@
 <br>
 👉 http://localhost:3000
 
-## 📦 Features
-
-<h3 align="center">- メニュー -</h3>
+## デモアカウント
 <ul>
   <li>デモアカウント
     <ul>
@@ -33,6 +31,10 @@
     </ul>
   </li>
 </ul>
+
+## 📦 Features
+
+<h3 align="center">- メニュー -</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59816193/76178879-4249b100-61fc-11ea-9ca5-f1d4433a97db.png" width=80%>
 </p>
