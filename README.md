@@ -24,12 +24,8 @@
 
 ## デモアカウント
 <ul>
-  <li>デモアカウント
-    <ul>
-      <li>管理者　 ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
-      <li>デモ用　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1<li>
-    </ul>
-  </li>
+  <li>管理者　 ID/Pass： adminusr@fukuoka-demo.jp / adminusr</li>
+  <li>デモ用　 ID/Pass： testuser1@fukuoka-demo.jp / testuser1<li>
 </ul>
 
 ## 📦 Features
