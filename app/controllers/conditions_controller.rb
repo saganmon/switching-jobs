@@ -22,7 +22,8 @@ class ConditionsController < ApplicationController
   def destroy
     condition = Condition.find(params[:id])
     condition.destroy
-    redirect_to user_path(current_user)
+    # redirect_to user_path(current_user) # Ajax化のため削除
+    head :no_content
   end
 
   private

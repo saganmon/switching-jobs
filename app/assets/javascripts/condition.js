@@ -25,7 +25,7 @@ $(function(){
             <a href="/conditions/${condition.id}/edit">
               <i class="fas fa-edit button"></i>
             </a>
-            <a rel="nofollow" data-method="delete" href="/conditions/${condition.id}">
+            <a data-confirm="活動を削除します。よろしいですか？" class="delete" data-remote="true" rel="nofollow" data-method="delete" href="/conditions/${condition.id}">
               <i class="fas fa-trash-alt button"></i>
             </a>
           </td>
@@ -51,6 +51,8 @@ $(function(){
       .done(function(condition){
         var html = buildHTML(condition);
         $('.conditions-table').append(html);
+        $('#new_condition')[0].reset();
+        $('.new-status__send').prop('disabled', false);  
       })
       .fail(function(){
         alert('Ajax通信に失敗しました');
@@ -62,7 +64,6 @@ $(function(){
   $('.body-conditions__find--box').on('keyup', function() {
     var keyword = $(this).val();
     var regExp = new RegExp(keyword);
-
     $('.conditions-table').find('tr').hide().each(function() {
       var tr = $(this);
       $(this).find('td').each(function() {
@@ -73,8 +74,11 @@ $(function(){
     });
   });
 
+  $('a[data-method="delete"]').on('ajax:success', function() {
+    $(this).parent().parent().parent().remove();
+  });
+
   $('.conditions-table__column').mouseover(function(){
-    // console.log("mouseover");
     $(this).css('backgroundColor', 'aquamarine')
   });
 

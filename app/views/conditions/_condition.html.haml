@@ -18,5 +18,5 @@
     %td.conditions-table__column--edit
       = link_to edit_condition_path(condition) do
         = icon('fas', 'edit', class: "button")
-      = link_to condition_path(condition), method: :delete do
+      = link_to condition_path(condition), method: :delete, remote: true, data:{ confirm: "活動を削除します。よろしいですか？" }, class: "delete" do
         = icon('fas', 'trash-alt', class: "button")
