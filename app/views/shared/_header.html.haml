@@ -1,6 +1,7 @@
 .header
   .header__title
-    転職サプリ
+    = link_to users_path do
+      転職サプリ
   .header__contents
     - if user_signed_in?
       .header__contents--name

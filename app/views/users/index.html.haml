@@ -5,18 +5,15 @@
     = icon('fas', 'building', class: "button")
     企業を探す
     .menu-items__offices--picture
+      = link_to offices_path do
+        = image_tag("/images/company_image.png", width: "400px", height: "400px") 
     .menu-items__offices--text
-      福岡を中心としたWeb系の企業を紹介しています。
-    .menu-items__offices--link
-      = link_to "Go", offices_path
+      Web系の企業を紹介しています。
   .menu-items__conditions
     = icon('fas', 'chart-line', class: "button")
     活動を見る
     .menu-items__conditions--picture
+      = link_to user_path(current_user) do
+        = image_tag("/images/status_image.png", width: "400px", height: "400px") 
     .menu-items__conditions--text
       あなたの転職活動の状況を確認しましょう。
-    .menu-items__conditions--link
-      -# - if current_user.admin?
-      -#   = link_to "Go", admin_conditions_path
-      -# - else
-      = link_to "Go", user_path(current_user)

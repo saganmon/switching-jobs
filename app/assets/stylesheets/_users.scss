@@ -72,23 +72,12 @@ th {
     &--picture {
       width: 400px;
       height: 400px;
-      background: url('/images/company_image.png');
     }
     &--text {
       font-weight: bold;
       font-family: $font-family;
       font-size: $font-size-body;
       color: $font-color-body;
-    }
-    &--link {
-      font-weight: bold;
-      font-family: $font-family;
-      font-size: $font-size-middle;
-      a {
-        text-decoration: none;
-        color: $font-color-body;
-      }
-
     }
   }
   &__conditions {
@@ -102,22 +91,12 @@ th {
     &--picture {
       width: 400px;
       height: 400px;
-      background: url('/images/status_image.png');
     }
     &--text {
       font-weight: bold;
       font-family: $font-family;
       font-size: $font-size-body;
       color: $font-color-body;
-    }
-    &--link {
-      font-weight: bold;
-      font-family: $font-family;
-      font-size: $font-size-middle;
-      a {
-        color: $font-color-body;
-        text-decoration: none;
-      }
     }
   }
 }

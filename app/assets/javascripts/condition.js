@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
   function buildHTML(condition) {
     var html =
       `<tbody class="conditions-table__body">
@@ -34,7 +34,7 @@ $(function(){
     return html;
   };
 
-  $('.body-conditions__new--button').on('click', function(){
+  $('.body-conditions__new--button').on('click', function() {
     $('.modal-overlay').fadeIn("slow");
     $('#new_condition').on('submit', function(e) {
       e.preventDefault();
@@ -78,11 +78,11 @@ $(function(){
     $(this).parent().parent().parent().remove();
   });
 
-  $('.conditions-table__column').mouseover(function(){
+  $('.conditions-table__column').mouseover(function() {
     $(this).css('backgroundColor', 'aquamarine')
   });
 
-  $('.conditions-table__column').mouseleave(function(){
+  $('.conditions-table__column').mouseleave(function() {
     $(this).css('backgroundColor', 'ghostwhite')
   });
 });
