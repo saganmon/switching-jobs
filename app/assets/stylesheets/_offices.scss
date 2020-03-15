@@ -1,5 +1,3 @@
-@import "modules/fonts";
-
 th, td {
   border-top: 1px solid #bbb;
   height: 50px;
@@ -78,38 +76,74 @@ th {
   &__body {
   }
   &__column {
-    position: sticky;
-    z-index: 1;
-    &--area {
-      padding-left: 5px;
-      width: 10%;
-    }
-    &--name {
-      padding-left: 5px;
-      width: 20%;
-    }
-    &--people {
-      padding-left: 5px;      
-      width: 10%;
-    }
-    &--revenue {
-      padding-left: 5px;
-      width: 10%;
-    }
-    &--url {
-      padding-left: 5px;
-      width: 20%;
-      a {
-        text-decoration: none;
-        color: $font-color-body;
+    &__title {
+      position: sticky;
+      z-index: 1;
+      &--area {
+        padding-left: 5px;
+        width: 10%;
+      }
+      &--name {
+        padding-left: 5px;
+        width: 20%;
+      }
+      &--people {
+        padding-left: 5px;      
+        width: 10%;
+      }
+      &--revenue {
+        padding-left: 5px;
+        width: 10%;
+      }
+      &--url {
+        padding-left: 5px;
+        width: 20%;
+        a {
+          text-decoration: none;
+          color: $font-color-body;
+        }
+      }
+      &--button {
+        padding-left: 5px;
+        width: 5%;
+        a {
+          text-decoration: none;
+          color: $font-color-body;
+        }
       }
     }
-    &--button {
-      padding-left: 5px;
-      width: 5%;
-      a {
-        text-decoration: none;
-        color: $font-color-body;
+    &__data {
+      &--area {
+        padding-left: 5px;
+        width: 10%;
+      }
+      &--name {
+        padding-left: 5px;
+        width: 20%;
+      }
+      &--people {
+        padding-left: 5px;      
+        width: 10%;
+      }
+      &--revenue {
+        padding-left: 5px;
+        width: 10%;
+      }
+      &--url {
+        padding-left: 5px;
+        width: 20%;
+        a {
+          text-decoration: none;
+          color: $font-color-body;
+        }
+      }
+      &--button {
+        padding-left: 5px;
+        width: 5%;
+        a {
+          text-decoration: none;
+          color: $font-color-body;
+        }
       }
     }
   }

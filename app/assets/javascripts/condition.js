@@ -2,26 +2,26 @@ $(function() {
   function buildHTML(condition) {
     var html =
       `<tbody class="conditions-table__body">
-        <tr class="conditions-table__column" style="background-color: ghostwhite;">
-          <td class="conditions-table__column--status">
+        <tr class="conditions-table__column__data" style="background-color: ghostwhite;">
+          <td class="conditions-table__column__data--status">
             ${condition.phase}
           </td>
-          <td class="conditions-table__column--result">
+          <td class="conditions-table__column__data--result">
             ${condition.result}
           </td>
-          <td class="conditions-table__column--company-name">
+          <td class="conditions-table__column__data--company-name">
             ${condition.company_name}
           </td>
-          <td class="conditions-table__column--company-area">
+          <td class="conditions-table__column__data--company-area">
             ${condition.area}
           </td>
-          <td class="conditions-table__column--date">
+          <td class="conditions-table__column__data--date">
             ${condition.date}
           </td>
-          <td class="conditions-table__column--memo">
+          <td class="conditions-table__column__data--memo">
             ${condition.memo}
           </td>
-          <td class="conditions-table__column--edit">
+          <td class="conditions-table__column__data--edit">
             <a href="/conditions/${condition.id}/edit">
               <i class="fas fa-edit button"></i>
             </a>
@@ -78,11 +78,11 @@ $(function() {
     $(this).parent().parent().parent().remove();
   });
 
-  $('.conditions-table__column').mouseover(function() {
+  $('.conditions-table__column__data').mouseover(function() {
     $(this).css('backgroundColor', 'aquamarine')
   });
 
-  $('.conditions-table__column').mouseleave(function() {
+  $('.conditions-table__column__data').mouseleave(function() {
     $(this).css('backgroundColor', 'ghostwhite')
   });
 });
