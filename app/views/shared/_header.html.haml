@@ -6,10 +6,14 @@
     - if user_signed_in?
       .header__contents--name
         ようこそ #{current_user.nickname} さん
+      .header__contents--back
+        = link_to users_path do
+          = icon('fas', 'hand-point-left', class: "button")
+          戻る
       .header__contents--button
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-        -# = link_to "ログアウト", destroy_user_session_path, method: :delete do
-        -#   = icon('fas', 'sign-out-alt', class: "button")
+        = link_to destroy_user_session_path, method: :delete do
+          = icon('fas', 'sign-out-alt', class: "button")
+          ログアウト
     - else
       .header__contents--name
         = link_to "新規登録", new_user_registration_path

@@ -23,7 +23,17 @@
       font-family: $font-family;
       font-size: $font-size-body;
       color: $font-color-subtitle-comp;
-      margin-right: 20px;
+      margin-right: 30px;
+    }
+    &--back {
+      a {
+        font-weight: bold;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        color: $font-color-subtitle-comp;
+        text-decoration: none;
+        margin-right: 30px;
+      }
     }
     &--button {
       a {
@@ -32,6 +42,7 @@
         font-size: $font-size-body;
         color: $font-color-subtitle-comp;
         text-decoration: none;
+        margin-right: 30px;
       }
     }
   }

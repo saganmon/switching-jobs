@@ -89,14 +89,17 @@ h3 {
       text-decoration: none;
     }
     &--button {
-      font-weight: bold;
       font-family: $font-family;
-      font-size: $font-size-body;
+      font-size: 20px;
       color: $font-color-subtitle;
+      border-radius: 5px;
+      height: 40px;
+      width: 100px;
     }
   }
   &__find {
     &--box {
+      margin-top: 20px;
       font-family: $font-family;
       height: 30px;
       width: 300px;
@@ -213,15 +216,20 @@ h3 {
   font-size: $font-size-body;
   color: $font-color-body;
   &__field {
-    &---companies {
+    &--companies {
+      height: 30px;
     }
     &--phases {
+      height: 30px;
+      width: 100px;
     }
-    &--resules {
+    &--results {
+      height: 30px;
+      width: 100px;
     }
     &--date {
-      height: 50px;
-      width: 400px;
+      height: 30px;
+      width: 200px;
     }
     &--memo {
       height: 150px;

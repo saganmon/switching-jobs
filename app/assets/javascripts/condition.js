@@ -78,13 +78,21 @@ $(function() {
     $(this).parent().parent().parent().remove();
   });
 
-  $('.conditions-table__column__data').mouseover(function() {
-    $(this).css('backgroundColor', 'aquamarine')
-  });
+  $('.conditions-table__column__data')
+    .mouseenter(function() {
+      $(this).css('backgroundColor', 'aquamarine');
+    })
+    .mouseleave(function() {
+      $(this).css('backgroundColor', 'ghostwhite');
+    });
 
-  $('.conditions-table__column__data').mouseleave(function() {
-    $(this).css('backgroundColor', 'ghostwhite')
-  });
+  $('.body-conditions__new--button')
+    .mouseenter(function(){
+      $(this).css('fontWeight', 'bold');
+    })
+    .mouseleave(function(){
+      $(this).css('fontWeight', 'normal');
+    });
 });
 
 

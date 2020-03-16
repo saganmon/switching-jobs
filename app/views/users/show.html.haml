@@ -2,8 +2,7 @@
 
 .body-conditions
   .body-conditions__new
-    %button.body-conditions__new--button
-      活動登録
+    = button_tag '活動登録', type: 'button', class: 'body-conditions__new--button'
 
   .body-conditions__find
     %input.body-conditions__find--box{type: "text", placeholder: "検索ワード"}
