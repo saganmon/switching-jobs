@@ -1,14 +1,15 @@
 %tbody.offices-table__body
-  %tr.offices-table__column
-    %td.offices-table__column--area
+  %tr.offices-table__column__data
+    %td.offices-table__column__data--area
       = office.area
-    %td.offices-table__column--name
+    %td.offices-table__column__data--name
       = office.company_name
-    %td.offices-table__column--people
+    %td.offices-table__column__data--people
       = converting_to_people(office&.poople)
-    %td.offices-table__column--revenue
+    %td.offices-table__column__data--revenue
       = converting_to_jpy(office&.revenue)
-    %td.offices-table__column--url
+    %td.offices-table__column__data--url
       %a(href = '#{office.url}' target = '_blank')企業のページへ
-    %td.offices-table__column--button
-      = link_to "Go", office_path(office)
+    %td.offices-table__column__data--detail
+      = link_to office_path(office) do
+        = icon('fas', 'info-circle', class: "button")

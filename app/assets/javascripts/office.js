@@ -11,14 +11,13 @@ $(function() {
         }
       })
     })
-  })
+  });
 
-  $('.offices-table__column').mouseover(function(){
-    // console.log("mouseover");
-    $(this).css('backgroundColor', 'aquamarine')
-  })
-
-  $('.offices-table__column').mouseleave(function(){
-    $(this).css('backgroundColor', 'ghostwhite')
-  })
-})
+  $('.offices-table__column__data')
+    .mouseenter(function() {
+      $(this).css('backgroundColor', 'aquamarine')
+    })
+    .mouseleave(function() {
+      $(this).css('backgroundColor', 'ghostwhite')
+    });
+});

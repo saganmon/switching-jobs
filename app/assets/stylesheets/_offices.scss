@@ -1,26 +1,3 @@
-th, td {
-  border-top: 1px solid #bbb;
-  height: 50px;
-  font-family: $font-family;
-  font-size: $font-size-body;
-  color: $font-color-body;  
-}
-
-tr {
-  background-color: ghostwhite;
-  transition: opacity 1s;
-  transition-property: background-color;
-}
-
-th {
-  font-weight: bold;
-  border-bottom: 1px solid #bbb;
-}
-
-.title {
-  font-weight: bold;
-}
-
 .comp {
   color: $font-color-subtitle-comp;
 }
@@ -63,29 +40,34 @@ th {
   &__list {
     margin-top: 20px;
     height: calc(100% - 100px);
-    overflow: scroll;
   }
-}
-
-.title {
-  padding-left: 30px;
 }
 
 .offices-table {
   width: calc(100vw - 600px);
+  border-top: 1px solid #bbb;
+  font-family: $font-family;
+  font-size: $font-size-body;
+  color: $font-color-body;
+  overflow: scroll;
   &__body {
   }
   &__column {
+    border-top: 1px solid #bbb;
     &__title {
       position: sticky;
       z-index: 1;
+      font-weight: bold;
+      border-bottom: 3px solid #bbb;    
+      background-color: ghostwhite;
+      height: 40px;
       &--area {
         padding-left: 5px;
         width: 10%;
       }
       &--name {
         padding-left: 5px;
-        width: 20%;
+        width: 30%;
       }
       &--people {
         padding-left: 5px;      
@@ -97,15 +79,15 @@ th {
       }
       &--url {
         padding-left: 5px;
-        width: 20%;
+        width: 10%;
         a {
           text-decoration: none;
           color: $font-color-body;
         }
       }
-      &--button {
+      &--detail {
         padding-left: 5px;
-        width: 5%;
+        width: 10%;
         a {
           text-decoration: none;
           color: $font-color-body;
@@ -113,13 +95,18 @@ th {
       }
     }
     &__data {
+      height: 40px;
+      background-color: ghostwhite;
+      border-bottom: 1px solid #bbb;
+      transition: opacity 1s;
+      transition-property: background-color;
       &--area {
         padding-left: 5px;
         width: 10%;
       }
       &--name {
         padding-left: 5px;
-        width: 20%;
+        width: 30%;
       }
       &--people {
         padding-left: 5px;      
@@ -131,15 +118,15 @@ th {
       }
       &--url {
         padding-left: 5px;
-        width: 20%;
+        width: 10%;
         a {
           text-decoration: none;
           color: $font-color-body;
         }
       }
-      &--button {
+      &--detail {
         padding-left: 5px;
-        width: 5%;
+        width: 10%;
         a {
           text-decoration: none;
           color: $font-color-body;
@@ -155,50 +142,103 @@ th {
 
   }
   &__column {
-    &--name {
-      padding-left: 5px;
-      width: 30%;
-      height: 50px;
+    background-color: ghostwhite;
+    border-bottom: 1px solid #bbb;
+    &__title {
+      &--name {
+        padding-left: 5px;
+        width: 30%;
+        height: 50px;
+      }
+      &--overview {
+        padding-left: 5px;
+        width: 30%;
+        height: 200px;
+      }
+      &--ceo {
+        padding-left: 5px;
+        width: 30%;
+        height: 50px;
+      }
+      &--foundation {
+        padding-left: 5px;
+        width: 30%;
+        height: 50px;
+      }
+      &--revenue {
+        padding-left: 5px;
+        width: 30%;
+        height: 50px;
+      }
+      &--people {
+        padding-left: 5px;      
+        width: 30%;
+        height: 50px;
+      }
+      &--address {
+        padding-left: 5px;
+        width: 30%;
+        height: 200px;
+      }
+      &--url {
+        padding-left: 5px;
+        width: 30%;
+        height: 50px;
+        &--item {
+          a {
+            text-decoration: none;
+            color: $font-color-body;
+          } 
+        }
+      }
     }
-    &--overview {
-      padding-left: 5px;
-      width: 30%;
-      height: 200px;
-    }
-    &--ceo {
-      padding-left: 5px;
-      width: 30%;
-      height: 50px;
-    }
-    &--foundation {
-      padding-left: 5px;
-      width: 30%;
-      height: 50px;
-    }
-    &--revenue {
-      padding-left: 5px;
-      width: 30%;
-      height: 50px;
-    }
-    &--people {
-      padding-left: 5px;      
-      width: 30%;
-      height: 50px;
-    }
-    &--address {
-      padding-left: 5px;
-      width: 30%;
-      height: 200px;
-    }
-    &--url {
-      padding-left: 5px;
-      width: 30%;
-      height: 50px;
-      &--item {
-        a {
-          text-decoration: none;
-          color: $font-color-body;
-        } 
+    &__data {
+      background-color: ghostwhite;
+      &--name {
+        padding-left: 5px;
+        width: 70%;
+        height: 50px;
+      }
+      &--overview {
+        padding-left: 5px;
+        width: 70%;
+        height: 200px;
+      }
+      &--ceo {
+        padding-left: 5px;
+        width: 70%;
+        height: 50px;
+      }
+      &--foundation {
+        padding-left: 5px;
+        width: 70%;
+        height: 50px;
+      }
+      &--revenue {
+        padding-left: 5px;
+        width: 70%;
+        height: 50px;
+      }
+      &--people {
+        padding-left: 5px;      
+        width: 70%;
+        height: 50px;
+      }
+      &--address {
+        padding-left: 5px;
+        width: 70%;
+        height: 200px;
+      }
+      &--url {
+        padding-left: 5px;
+        width: 70%;
+        height: 50px;
+        &--item {
+          a {
+            text-decoration: none;
+            color: $font-color-body;
+          } 
+        }
       }
     }
   }

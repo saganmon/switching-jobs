@@ -5,44 +5,43 @@
     %br
     %table.office-table
       %tbody.office-table__body
-        %tr.office-table__column---title
-          %th.office-table__column--name
+        %tr.office-table__column
+          %th.office-table__column__title--name
             企業名
-          %td.office-table__column--name--item
+          %td.office-table__column__data--name
             = @office.company_name
-        %tr.office-table__column---title
-          %th.office-table__column--overview
+        %tr.office-table__column
+          %th.office-table__column__title--overview
             事業内容
-          %td.office-table__column--overview--item
+          %td.office-table__column__data--overview
             = simple_format @office.overview
-        %tr.office-table__column---title
-          %th.office-table__column--ceo
+        %tr.office-table__column
+          %th.office-table__column__title--ceo
             代表取締役社長
-          %td.office-table__column--ceo--item
+          %td.office-table__column__data--ceo
             = @office.ceo
-        %tr.office-table__column---title
-          %th.office-table__column--foundation
+        %tr.office-table__column
+          %th.office-table__column__title--foundation
             設立年月日
-          %td.office-table__column--foundation--item
+          %td.office-table__column__data--foundation
             = converting_to_year(@office.foundation)
-        %tr.office-table__column---title
-          %th.office-table__column--revenue
+        %tr.office-table__column
+          %th.office-table__column__title--revenue
             売上高
-          %td.office-table__column--revenue--item
+          %td.office-table__column__data--revenue
             = converting_to_jpy(@office.revenue)
-        %tr.office-table__column---title
-          %th.office-table__column--people
+        %tr.office-table__column
+          %th.office-table__column__title--people
             従業員数
-          %td.office-table__column--people--item
+          %td.office-table__column__data--people
             = converting_to_people(@office.poople)
-        %tr.office-table__column---title
-          %th.office-table__column--address
+        %tr.office-table__column
+          %th.office-table__column__title--address
             本社住所
-          %td.office-table__column--address--item
+          %td.office-table__column__data--address
             = @office.address
-        %tr.office-table__column---title
-          %th.office-table__column--url
+        %tr.office-table__column
+          %th.office-table__column__title--url
             ホームページ
-          %td.office-table__column--url--item
+          %td.office-table__column__data--url
             %a(href = '#{@office.url}' target = '_blank')企業のページへ
-            -# %a{href: '#{@office.url}', target: '_blank'}ホームページへ

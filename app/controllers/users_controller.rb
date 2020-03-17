@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :login_check, only: [:index, :show]
 
   def index
+    @activity_logs = ActivityLog.all.order(updated_at: :desc).limit(5)
   end
 
   def show

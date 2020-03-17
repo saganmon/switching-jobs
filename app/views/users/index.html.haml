@@ -1,3 +1,13 @@
+-if current_user.admin?
+  .menu-news
+    .menu-news__title
+      What's new
+    .menu-news__items
+      - @activity_logs.each do |a|
+        = a.time
+        = a.log
+        = tag.br
+
 .menu-items
   .menu-items__title
     Contents
